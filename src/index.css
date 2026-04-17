@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+@theme {
+  --color-verde-bosque: #1a3021;
+  --color-gris-humo: #f2f4f3;
+  --color-dorado-mate: #9a8c73;
+  --color-gris-carbon: #333333;
+  
+  --font-serif: "Lora", serif;
+  --font-sans: "Inter", sans-serif;
+}
+
+/* Configuramos el comportamiento base de la página */
+body {
+  background-color: var(--color-gris-humo);
+  color: var(--color-gris-carbon);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+}

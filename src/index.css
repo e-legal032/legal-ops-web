@@ -10,11 +10,45 @@
   --font-sans: "Inter", sans-serif;
 }
 
-/* Configuramos el comportamiento base de la página */
-body {
-  background-color: var(--color-gris-humo);
-  color: var(--color-gris-carbon);
-  font-family: var(--font-sans);
-  -webkit-font-smoothing: antialiased;
-  margin: 0;
+@layer base {
+  body {
+    @apply bg-gris-humo text-gris-carbon antialiased;
+  }
+}
+
+@layer components {
+  /* Botón de Contacto */
+  .contact-button {
+    @apply flex-1 p-10 flex flex-col items-center gap-4 bg-verde-bosque border border-verde-bosque transition-all duration-500 ease-out shadow-lg cursor-pointer;
+  }
+
+  .contact-button:hover {
+    @apply bg-white shadow-2xl -translate-y-2;
+  }
+
+  /* Etiquetas (Email/WhatsApp) */
+  .contact-button .label {
+    @apply font-sans uppercase tracking-[0.3em] text-[10px] font-bold text-dorado-mate;
+  }
+
+  /* Texto de acción: AHORA SIN ITALIC Y MÁS FUERTE */
+  .contact-button .action-text {
+    @apply font-sans text-lg font-semibold tracking-tight text-gris-humo transition-colors duration-500;
+  }
+
+  .contact-button:hover .action-text {
+    @apply text-verde-bosque;
+  }
+}
+
+@utility nav-item {
+  @apply text-[10px] uppercase tracking-[0.2em] font-semibold text-gris-carbon/60 transition-all duration-300 hover:text-verde-bosque hover:-translate-y-0.5 cursor-pointer;
+}
+
+@utility btn-language {
+  @apply flex items-center gap-2 border border-verde-bosque px-4 py-1 rounded-full transition-all duration-300 font-bold text-verde-bosque hover:bg-verde-bosque hover:text-white cursor-pointer;
+}
+
+@utility hero-line {
+  @apply w-px h-20 bg-dorado-mate opacity-40 block;
 }

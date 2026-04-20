@@ -1,16 +1,92 @@
-# React + Vite
+# G | T | N — Gestión Técnica Notarial
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Status](https://img.shields.io/badge/Status-Production-success)
+![React](https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB)
+![Tailwind](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat&logo=tailwind-css&logoColor=white)
+![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?style=flat&logo=framer&logoColor=white)
 
-Currently, two official plugins are available:
+**GTN** es una landing page profesional de alta precisión diseñada para servicios de consultoría técnica notarial y legal. El sitio destaca por una estética minimalista ("Brutalismo Elegante") y una arquitectura orientada a la soberanía tecnológica y la privacidad.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Stack Tecnológico
 
-## React Compiler
+* **Frontend:** React.js con Vite.
+* **Estilos:** Tailwind CSS (Custom Theme: *Verde Musgo*, *Crema Oliva*, *Dorado Mate*).
+* **Animaciones:** Framer Motion (interacciones fluidas y micro-interacciones).
+* **Iconografía:** Lucide React (líneas finas de 1px para mantener la estética técnica).
+* **Despliegue:** Optimizado para entornos estáticos (Netlify/Vercel).
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Características Principales
 
-## Expanding the ESLint configuration
+### 1. Navegación Híbrida Inteligente
+Implementación de un sistema de navegación dual:
+- **Desktop:** Menú horizontal de alta visibilidad.
+- **Mobile:** Sistema de overlay con detección activa de *viewport* vía JavaScript para evitar conflictos de especificidad CSS.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 2. Manifiesto de Soberanía Tecnológica
+Sección central que comunica la filosofía del proyecto: "Tecnología Transparente". Enfocado en sistemas abiertos, encriptación y control total del usuario sobre sus datos.
+
+### 3. Service Cards Dinámicas
+Componentes de acordeón responsivos que desglosan cada servicio en tres ejes:
+- **Problema:** Diagnóstico inicial.
+- **Intervención:** Solución técnica aplicada.
+- **Resultado:** Valor agregado tangible.
+
+### 4. Tech Stack de Privacidad
+Exhibición de herramientas soberanas integradas en el flujo de trabajo:
+- **Proton Suite** (Comunicación encriptada).
+- **VeraCrypt** (Cifrado de discos).
+- **PDF24 Local** (Procesamiento local sin nube).
+- **Syncthing** (Sincronización P2P).
+
+
+## Instalación y Desarrollo
+
+1. Clonar el repositorio:
+   ```bash 
+   git clone [https://github.com/e-legal032/legal-ops-web.git](https://github.com/e-legal032/legal-ops-web.git)
+   ```
+2. Instalar dependencias:
+   ```bash
+   npm install
+   ```
+3. Iniciar servidor de desarrollo:
+   ```bash
+   npm run dev
+   ```
+4. Construir para producción:
+   ```bash
+   npm run build
+   ```
+
+## Estructura de Archivos Clave
+- /src/components/HeroGraphic.jsx: Gráfico técnico SVG animado.
+
+- /src/components/ServiceCard.jsx: Lógica de acordeón y grid responsivo.
+
+- /src/components/TechStack.jsx: Grilla de herramientas con escalado dinámico.
+
+- /src/translations.js: Diccionario centralizado para soporte bilingüe (ES/EN).
+
+## Despliegue (Deployment)
+
+El proyecto está optimizado para ser desplegado en plataformas de **Static Site Hosting** (Netlify, Vercel o GitHub Pages).
+
+### Requisitos Previos para Producción
+Antes de cada despliegue, ejecutar el comando de optimización de assets:
+```bash
+npm run build
+```
+Esto generará una carpeta dist/ con el código minificado, optimización de árboles (tree-shaking) y compresión de SVGs.
+
+### Configuración en Netlify (Recomendado)
+Para un despliegue exitoso, configurar los siguientes parámetros en el panel de control de Netlify:
+
+- Build Command: npm run build
+
+- Publish directory: dist
+
+Node Version: 20.x o superior.
+
+
+## Licencia
+Privado - Todos los derechos reservados por G | T | N.

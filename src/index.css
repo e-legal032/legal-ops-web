@@ -35,11 +35,11 @@ html {
 }
 
 @utility nav-item {
-  @apply text-[9px] md:text-[10px] uppercase tracking-[0.1em] md:tracking-[0.2em] font-semibold text-verde-musgo transition-all duration-300 hover:text-crema-oliva cursor-pointer whitespace-nowrap;
+  @apply text-base md:text-[10px] uppercase tracking-[0.1em] md:tracking-[0.2em] font-semibold text-verde-musgo transition-all duration-300 hover:text-crema-oliva cursor-pointer;
 }
 
 @utility nav-item-contact {
-  @apply text-[9px] md:text-[10px] uppercase tracking-[0.1em] md:tracking-[0.2em] font-bold text-dorado-mate transition-all duration-300 hover:text-crema-oliva cursor-pointer;
+  @apply text-base md:text-[10px] uppercase tracking-[0.1em] md:tracking-[0.2em] font-bold text-dorado-mate transition-all duration-300 hover:text-crema-oliva cursor-pointer;
 }
 
 @utility btn-language {

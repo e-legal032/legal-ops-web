@@ -54,14 +54,16 @@ function App() {
             <button className="z-[60] text-verde-musgo p-2" onClick={() => setIsMenuOpen(!isMenuOpen)}>
               {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
             </button>
-            <div className={`fixed inset-0 bg-fondo-deep flex flex-col items-center justify-center gap-8 transition-transform duration-500 z-[50] ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
-              <a href="#servicios" className="text-2xl text-crema-oliva" onClick={() => setIsMenuOpen(false)}>{t.services}</a>
-              <a href="https://ana-site.netlify.app" target="_blank" rel="noopener noreferrer" className="text-2xl text-crema-oliva" onClick={() => setIsMenuOpen(false)}>{t.otherSite}</a>
-              <a href="#contacto" className="text-2xl text-dorado-mate font-bold" onClick={() => setIsMenuOpen(false)}>{lang === 'es' ? 'Contacto' : 'Contact'}</a>
-              <button onClick={() => { setLang(lang === 'es' ? 'en' : 'es'); setIsMenuOpen(false); }} className="text-xl flex items-center gap-3 mt-4">
-                <Globe size={20} /> {lang.toUpperCase()}
-              </button>
-            </div>
+            {isMenuOpen && (
+              <div className="fixed top-0 left-0 w-full h-screen bg-fondo-deep flex flex-col items-center justify-center gap-8 z-[55]">
+                <a href="#servicios" className="nav-item" onClick={() => setIsMenuOpen(false)}>{t.services}</a>
+                <a href="https://ana-site.netlify.app" target="_blank" rel="noopener noreferrer" className="nav-item" onClick={() => setIsMenuOpen(false)}>{t.otherSite}</a>
+                <a href="#contacto" className="nav-item-contact" onClick={() => setIsMenuOpen(false)}>{lang === 'es' ? 'Contacto' : 'Contact'}</a>
+                <button onClick={() => { setLang(lang === 'es' ? 'en' : 'es'); setIsMenuOpen(false); }} className="btn-language">
+                  <Globe size={14} /> {lang.toUpperCase()}
+                </button>
+              </div>
+            )}
           </>
         )}
       </nav>

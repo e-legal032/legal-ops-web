@@ -133,7 +133,9 @@ function App() {
                 title={t[`pilar${num}`].title} 
                 problem={t[`pilar${num}`].problem} 
                 intervention={t[`pilar${num}`].intervention} 
-                result={t[`pilar${num}`].result} 
+                result={t[`pilar${num}`].result}
+                notionLink={t[`pilar${num}`].link}
+                viewMoreText={t.viewMore}
               />
             ))}
           </div>
